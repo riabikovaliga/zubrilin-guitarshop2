@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 110px;
+  background-color: #1e090626;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 24px);
+    left: 0;
+    width: 100%;
+    height: 74px;
+
+    background-image: url('../../img/strings.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% - 33px);
+    right: 0;
+    width: 863px;
+    height: 288px;
+    overflow: hidden;
+
+    background-image: url('../../img/guitar.png');
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}

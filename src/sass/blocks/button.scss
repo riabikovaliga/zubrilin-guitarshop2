@@ -1,0 +1,25 @@
+.button {
+  @include button-state;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $white;
+  background-color: #c1c1c1;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--orange {
+    @include button-orange-state;
+    background: #e27f00;
+  }
+
+  &--white {
+    @include button-white-state;
+    background: inherit;
+    border: 1px solid #585757;
+    border-radius: 2px;
+  }
+}

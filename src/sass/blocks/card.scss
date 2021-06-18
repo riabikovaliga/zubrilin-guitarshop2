@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 13px;
+  padding-top: 15px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  width: 220px;
+  min-height: 304px;
+  border: 1px solid #dddada;
+  box-sizing: border-box;
+  margin-right: 20px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.card__image {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  width: 68px;
+  height: 193px;
+  margin-bottom: 2px;
+  object-fit: none;
+}
+
+.card__review {
+  display: flex;
+  align-items: center;
+  align-self: start;
+}
+
+.card__popularity {
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #9f9e9e;
+}
+
+.card__stars-list {
+  @include list-reset;
+  display: flex;
+  max-width: 68px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+
+.card__stars-item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.card__name,
+.card__price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  color: $black;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__button-details {
+  width: 89px;
+  min-height: 23px;
+  padding-top: 4px;
+  padding-right: 11px;
+  padding-bottom: 4px;
+  padding-left: 9px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+}
+
+.card__button-buy {
+  position: relative;
+  width: 87px;
+  min-height: 23px;
+  padding-top: 4px;
+  padding-right: 2px;
+  padding-bottom: 4px;
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 6px;
+    left: 11px;
+    background-image: url('../../img/shopping-car.svg');
+  }
+}

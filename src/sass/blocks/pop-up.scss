@@ -1,0 +1,117 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  background-color: rgba(88, 87, 87, 0.6);
+}
+
+.pop-up__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 740px;
+  min-height: 185px;
+  padding: 30px 50px 26px;
+
+  top: 50%;
+  left: 50%;
+  background-color: $white;
+  box-shadow: 0px 5px 6px rgba(63, 63, 63, 0.2);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 4px;
+}
+
+.pop-up__button-close {
+  @include base-state;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  top: 19px;
+  right: 20px;
+}
+
+.pop-up__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 0.042em;
+  color: #474747;
+}
+
+.pop-up__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-up__buttons {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--sucess {
+    flex-direction: row;
+    justify-content: center;
+
+    .pop-up__button--to-basket {
+      margin-right: 37px;
+    }
+  }
+}
+
+.pop-up__button {
+  padding-top: 14px;
+  padding-right: 18px;
+  padding-bottom: 17px;
+  padding-left: 17px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+
+  letter-spacing: 0.073em;
+  color: $white;
+
+  &--add {
+    padding-top: 14px;
+    padding-right: 18px;
+    padding-bottom: 17px;
+    padding-left: 17px;
+  }
+
+  &--to-basket {
+    padding-top: 13px;
+    padding-right: 24px;
+    padding-bottom: 18px;
+    padding-left: 21px;
+  }
+
+  &--continue {
+    padding-top: 14px;
+    padding-right: 12px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    color: $black;
+  }
+
+  &--delete {
+    margin-bottom: 16px;
+    padding-top: 13px;
+    padding-right: 45px;
+    padding-bottom: 18px;
+    padding-left: 42px;
+  }
+}
